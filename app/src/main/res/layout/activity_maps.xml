@@ -1,0 +1,86 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/relLayout1"
+        android:weightSum="1">
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:id="@+id/TF_Sourcelocation"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:hint="Source Location"
+            android:inputType="textPersonName"
+            android:layout_weight="0.26" />
+
+        <EditText
+            android:layout_marginLeft="15dp"
+            android:id="@+id/TF_Destlocation"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:hint="Destination Location"
+            android:inputType="textPersonName"/>
+        <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/B_search"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Search" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout2"
+        android:layout_below="@id/relLayout1">
+
+        <Button
+            android:id="@+id/B_restaurent"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Restaurent" />
+        <Button
+            android:id="@+id/B_Food"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Food" />
+
+        <Button
+            android:id="@+id/B_School"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="School"/>
+
+        <Button
+            android:id="@+id/B_Direction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Direction"/>
+
+    </LinearLayout>
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:layout_below="@id/relLayout2"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.sanat.nitolniloy.mapdirectionnearby.MapsActivity"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"/>
+
+
+</RelativeLayout>
